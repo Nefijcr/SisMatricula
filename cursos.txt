@@ -1,0 +1,3 @@
+1,Secundaria Completa,Programacion Movil
+1,Secundaria Completa,Net 1
+2,Secundaria Completa,Java 1
