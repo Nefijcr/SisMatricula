@@ -82,6 +82,11 @@ public class Nota extends javax.swing.JInternalFrame {
                 btnGuardarMousePressed(evt);
             }
         });
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Btn_Quitar.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
@@ -96,6 +101,11 @@ public class Nota extends javax.swing.JInternalFrame {
         btnCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btnCancelarMousePressed(evt);
+            }
+        });
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
             }
         });
 
@@ -324,6 +334,14 @@ if (selectedRow != -1) {
         JOptionPane.showMessageDialog(this, "Seleccione una fila para modificar.", "Alerta", JOptionPane.WARNING_MESSAGE);
     }// TODO add your handling code here:
     }//GEN-LAST:event_btnModificarMousePressed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelarActionPerformed
 private void tablaDesing(){
       modelNota = new DefaultTableModel(0, 4); // 5 es el número de columnas
     // Establecer los nombres de las columnas en el modelo de la tabla
@@ -341,7 +359,7 @@ private void tablaDesing(){
     }
     private void limpiarCampos(){
         txtCodigoEstCurso.setText("");
-        
+        txtNota.setText("");
     }
     private boolean validarCamposVacios() {
     boolean camposVacios = false;
